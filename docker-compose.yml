@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+    kc-monorepo:
+        container_name: kc-monorepo
+        build:
+            context: .
+            dockerfile: Dockerfile
+            target: development
+        volumes:
+            - .:/usr/src/app
+            - .aws:/home/node/.aws
